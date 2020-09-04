@@ -1,0 +1,330 @@
+#header {
+  width: 100%;
+
+  .hero-back {
+    width: 100%;
+  }
+
+  .logo {
+    position: absolute;
+    left: 151px;
+    top: 52px;
+  }
+
+  #social-media-icons {
+    .circle {
+      position: fixed;
+      z-index: 10;
+      width: 68px;
+      height: 68px;
+      left: 78%;
+      top: 42px;
+      background: rgba(255, 255, 255, 0.15);
+      box-sizing: border-box;
+      backdrop-filter: blur(14px);
+      border-radius: 40px;
+      text-align: center;
+
+      &.face-color {
+        border: 4px solid #009cd9;
+        left: 78%;
+      }
+
+      &.insta-color {
+        border: 4px solid #b72c2c;
+        left: 84%;
+      }
+
+      &.youtube-color {
+        border: 4px solid #d8ad3d;
+        left: 90%;
+      }
+
+      img {
+        position: relative;
+        top: 16px;
+
+        &.img-1 {
+          top: 18px;
+        }
+      }
+    }
+  }
+
+  .hero-shape {
+    position: absolute;
+    width: 1400px;
+    left: -460px;
+    top: 421px;
+    transform: rotate(2.4deg);
+  }
+
+  .hero-text {
+    position: absolute;
+    padding-left: 150px;
+    top: 310px;
+    font-family: Caveat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 120px;
+    line-height: 100px;
+    color: #3f454a;
+  }
+
+  .gradient {
+    position: relative;
+    bottom: 253px;
+    height: 253px;
+
+    background: linear-gradient(
+      0deg,
+      #f9f9f9 0%,
+      #f9f9f9 32.22%,
+      rgba(255, 255, 255, 0.71) 61.99%,
+      rgba(255, 255, 255, 0.0729167) 93.72%,
+      rgba(255, 255, 255, 0) 93.72%
+    );
+  }
+}
+
+#our-products {
+  position: relative;
+  top: -320px;
+
+  .products-title {
+    text-align: center;
+
+    .title {
+      text-align: center;
+      font-family: Caveat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 80px;
+      line-height: 38px;
+      color: #3f454a;
+    }
+
+    .brush {
+      opacity: 0.3;
+      width: 458px;
+      position: relative;
+      top: -23px;
+    }
+  }
+
+  #products-section {
+    padding: 0px 130px 0px 130px;
+    margin-top: 30px;
+    display: flex;
+
+    .categories {
+      width: 22%;
+      height: 319px;
+      padding: 24px;
+      background: #ffffff;
+      box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.07);
+      border-radius: 10px;
+
+      p {
+        position: relative;
+        cursor: pointer;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 23px;
+
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+
+        color: #3f454a;
+
+        &.selected {
+          font-weight: bold;
+          color: #d8ad3d;
+        }
+      }
+
+      p.selected::after {
+        position: absolute;
+        left: 250px;
+        content: url(../../../assets/arrow.svg);
+      }
+
+      p + p {
+        margin-top: 30px;
+      }
+    }
+
+    .products-list {
+      width: 78%;
+      margin-left: 30px;
+      display: flex;
+      flex-wrap: wrap;
+
+      & > .card {
+        margin-left: 30px;
+        margin-bottom: 36px;
+      }
+
+      .card {
+        width: 270px;
+        height: 438px;
+        cursor: pointer;
+        border-radius: 0px 0px 10px 10px;
+        -webkit-box-shadow: 4px 5px 24px 0px #ddd;
+        -moz-box-shadow: 4px 5px 24px 0px #ddd;
+        box-shadow: 4px 5px 24px 0px #ddd;
+
+        img {
+          width: 100%;
+          height: 204px;
+          border-radius: 10px 10px 0px 0px;
+        }
+
+        p.title {
+          padding: 16px;
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 24px;
+          color: #3f454a;
+        }
+
+        p.title:hover {
+          transition-duration: 0.4s;
+          color: #d8ad3d;
+        }
+
+        p.content {
+          padding: 0px 14px 0px 14px;
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 24px;
+          color: #3f454a;
+        }
+      }
+    }
+  }
+}
+
+#contact {
+  position: relative;
+  top: -220px;
+  text-align: center;
+
+  .contact-text {
+    font-family: Caveat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 38px;
+
+    align-items: center;
+
+    color: #3f454a;
+  }
+
+  .hero-heading {
+    position: relative;
+    top: -24px;
+    opacity: 0.3;
+    width: 464px;
+  }
+
+  form {
+    width: 700px;
+    margin: auto;
+    position: relative;
+
+    .form-row {
+      display: flex;
+
+      .form-field-container {
+        width: 50%;
+        margin-bottom: 10px;
+
+        input {
+          padding: 10px 20px 10px 20px;
+          outline: none;
+          width: 350px;
+          height: 50px;
+          background: #ffffff;
+          border: 1px solid #cfcfcf;
+          box-sizing: border-box;
+
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 24px;
+          color: #3f4544;
+        }
+
+        input:focus {
+          border: 1px solid #d8ad3d;
+        }
+
+        p {
+          text-align: left;
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 13px;
+          line-height: 24px;
+          text-transform: uppercase;
+          color: #24272a;
+        }
+      }
+
+      .form-field-container + .form-field-container {
+        margin-left: 24px;
+      }
+    }
+
+    button {
+      position: absolute;
+      right: -24px;
+      width: 170px;
+      height: 55px;
+      margin-top: 30px;
+
+      background: #d8ad3d;
+      border-radius: 50px;
+      border: none;
+
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 26px;
+
+      text-align: center;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+
+      color: #ffffff;
+    }
+
+    button:hover {
+      background: #009cd9;
+      transition-duration: 0.4s;
+    }
+
+    button:disabled {
+      background: #cfcfcf;
+      transition-duration: 0.4s;
+    }
+  }
+
+  .message {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 26px;
+  }
+}

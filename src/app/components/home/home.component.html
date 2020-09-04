@@ -1,0 +1,88 @@
+<div id="header">
+  <img class="hero-back" src="../../../assets/hero-background.jpg">
+
+  <img class="logo" src="../../../assets/logo.svg">
+
+  <div id="social-media-icons">
+    <div class="circle face-color">
+      <img src="../../../assets/facebook-icon.svg">
+    </div>
+
+    <div class="circle insta-color">
+      <img class="img-1" src="../../../assets/instagram-icon.svg">
+    </div>
+
+    <div class="circle youtube-color">
+      <img class="img-1" src="../../../assets/youtube-icon.svg">
+    </div>
+  </div>
+
+  <img class="hero-shape" src="../../../assets/hero-shape.png">
+  <p class="hero-text">El secreto <br>de tu cocina</p>
+
+  <div class="gradient"></div>
+
+</div>
+
+<div id="our-products">
+
+  <div class="products-title">
+    <p class="title">Nuestros artículos</p>
+    <img class="brush" src="../../../assets/heading-shape.png">
+  </div>
+
+  <div id="products-section">
+    <div class="categories">
+      <p [ngClass]="categorySelected == '' ? 'selected' : ''" (click)="filterByCategory('')">Todos</p>
+      <p [ngClass]="categorySelected == 'Productos' ? 'selected' : ''" (click)="filterByCategory('Productos')">Productos
+      </p>
+      <p [ngClass]="categorySelected == 'Recetas' ? 'selected' : ''" (click)="filterByCategory('Recetas')">Recetas</p>
+      <p [ngClass]="categorySelected == 'Consejos' ? 'selected' : ''" (click)="filterByCategory('Consejos')">Consejos
+      </p>
+    </div>
+
+    <div class="products-list">
+      <div class="card" *ngFor="let article of articleList">
+        <img [src]="article.image">
+        <p class="title">{{ article.title }}</p>
+        <p class="content">{{ article.content }}</p>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+<div id="contact">
+  <p class="contact-text">Contáctanos</p>
+  <img class="hero-heading" src="../../../assets/heading-shape.png">
+
+  <form [formGroup]="newsletterForm" (ngSubmit)="subscribeToNewsletter()">
+    <div class="form-row">
+      <div class="form-field-container">
+        <p>Nombre</p>
+        <input formControlName="firstName" type="text">
+      </div>
+      <div class="form-field-container">
+        <p>Apellido</p>
+        <input formControlName="lastName" type="text">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-field-container">
+        <p>Mail</p>
+        <input formControlName="email" type="text">
+      </div>
+      <div class="form-field-container">
+        <p>Teléfono</p>
+        <input type="number" formControlName="phone" type="text">
+      </div>
+    </div>
+
+    <button [disabled]="!newsletterForm.valid" type="submit">Enviar</button>
+  </form>
+
+  <p class="message" *ngIf="showMessage">Se ha subscrito al NewsLetter correctamente!</p>
+</div>
